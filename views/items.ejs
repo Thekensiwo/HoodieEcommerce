@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="male.css">
+    <script src="scripts/maleScript.js" defer type="module"></script>
+</head>
+
+<body>
+
+
+    <div class="modal2 off">
+
+        <h3>Sizes</h3>
+
+        <div class="sizes">
+
+            <div class="size-cont f-cont">
+                <div class="checkbox"></div>
+                <div class="size txt">S</div>
+            </div>
+
+            <div class="size-cont f-cont">
+                <div class="checkbox"></div>
+                <div class="size txt">M</div>
+            </div>
+
+            <div class="size-cont f-cont">
+                <div class="checkbox"></div>
+                <div class="size txt">L</div>
+            </div>
+
+            <div class="size-cont f-cont">
+                <div class="checkbox"></div>
+                <div class="size txt">XL</div>
+            </div>
+
+        </div>
+
+
+        <h3>Colours</h3>
+
+        <div class="colors">
+
+            <div class="color-cont f-cont">
+                <div class="checkbox"></div>
+                <div class="color txt">White</div>
+            </div>
+
+            <div class="color-cont f-cont">
+                <div class="checkbox"></div>
+                <div class="color txt">Black</div>
+            </div>
+
+            <div class="color-cont f-cont">
+                <div class="checkbox"></div>
+                <div class="color txt">Blue</div>
+            </div>
+
+            <div class="color-cont f-cont">
+                <div class="checkbox"></div>
+                <div class="color txt">Purple</div>
+            </div>
+
+        </div>
+
+
+
+        <h3>Price</h3>
+
+        <div class="price-cont">
+            <input class="price-from-mobile price-inp" type="number" placeholder="0" />
+            <svg width="10" height="3" viewBox="0 0 10 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="10" height="3" fill="#EFF2F7" />
+            </svg>
+            <input class="price-to-mobile price-inp" type="number" placeholder="150" />
+        </div>
+
+        <button class="findBtn modal-find">Find</button>
+
+    </div>
+    <div class="modal-bg2 off"></div>
+
+    <!-- Header -->
+    <%- include('./partials/header.ejs') %>
+
+
+
+
+
+
+
+
+        <!-- --- Main --- -->
+        <main>
+
+            <!-- Filters Button -->
+            <div class="filters-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M23 19H20.337C19.904 17.559 18.58 16.5 17 16.5C15.42 16.5 14.097 17.559 13.663 19H0.999984C0.447984 19 0 19.448 0 20C0 20.552 0.447984 21 0.999984 21H13.663C14.096 22.441 15.42 23.5 17 23.5C18.5799 23.5 19.903 22.441 20.337 21H23C23.553 21 24 20.552 24 20C24 19.448 23.553 19 23 19ZM17 21.5C16.173 21.5 15.5 20.827 15.5 20C15.5 19.173 16.173 18.5 17 18.5C17.827 18.5 18.5 19.173 18.5 20C18.5 20.827 17.827 21.5 17 21.5Z"
+                        fill="#EEEEEE" />
+                    <path
+                        d="M23 2.99998H20.337C19.903 1.559 18.58 0.5 17 0.5C15.42 0.5 14.097 1.559 13.663 2.99998H0.999984C0.447984 2.99998 0 3.44797 0 3.99997C0 4.55197 0.447984 4.99995 0.999984 4.99995H13.663C14.097 6.44099 15.42 7.49999 17 7.49999C18.58 7.49999 19.903 6.44099 20.337 5H23C23.553 5 24 4.55202 24 4.00002C24 3.44802 23.553 2.99998 23 2.99998ZM17 5.49997C16.173 5.49997 15.5 4.82699 15.5 3.99997C15.5 3.17295 16.173 2.49997 17 2.49997C17.827 2.49997 18.5 3.17295 18.5 3.99997C18.5 4.82699 17.827 5.49997 17 5.49997Z"
+                        fill="#EEEEEE" />
+                    <path
+                        d="M23 11H10.337C9.903 9.559 8.58 8.5 7.00003 8.5C5.42006 8.5 4.09702 9.559 3.66305 11H0.999984C0.447984 11 0 11.448 0 12C0 12.552 0.447984 13 0.999984 13H3.663C4.09702 14.4409 5.42002 15.4999 6.99998 15.4999C8.57995 15.4999 9.903 14.4409 10.337 13H23C23.553 13 24 12.552 24 12C24 11.448 23.553 11 23 11ZM6.99998 13.5C6.17297 13.5 5.49998 12.827 5.49998 12C5.49998 11.173 6.17297 10.5 6.99998 10.5C7.827 10.5 8.49998 11.173 8.49998 12C8.49998 12.827 7.827 13.5 6.99998 13.5Z"
+                        fill="#EEEEEE" />
+                </svg>
+                <div class="txt">Filters</div>
+            </div>
+
+
+
+            <!-- Filters (min-width: 1150px) -->
+
+            <div class="filters-cont">
+
+                <h3>Filters</h3>
+
+
+                <h4>Size</h4>
+
+                <div class="sizes">
+
+                    <div class="size-cont f-cont">
+                        <div class="checkbox"></div>
+                        <div class="size txt">S</div>
+                    </div>
+
+                    <div class="size-cont f-cont">
+                        <div class="checkbox"></div>
+                        <div class="size txt">M</div>
+                    </div>
+
+                    <div class="size-cont f-cont">
+                        <div class="checkbox"></div>
+                        <div class="size txt">L</div>
+                    </div>
+
+                    <div class="size-cont f-cont">
+                        <div class="checkbox"></div>
+                        <div class="size txt">XL</div>
+                    </div>
+
+                </div>
+
+
+                <h4>Price</h4>
+
+                <div class="price-cont">
+                    <input class="price-from price-inp" type="number" placeholder="0" value="<%= `${minPrice}`%>" />
+                    <svg width="10" height="3" viewBox="0 0 10 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="10" height="3" fill="#EFF2F7" />
+                    </svg>
+                    <input class="price-to price-inp" type="number" placeholder="150" value="<%= `${maxPrice}`%>" />
+                </div>
+
+
+                <h4>Colours</h4>
+                <div class="colors">
+
+                    <div class="color-cont f-cont">
+                        <div class="checkbox"></div>
+                        <div class="color txt">White</div>
+                    </div>
+
+                    <div class="color-cont f-cont">
+                        <div class="checkbox"></div>
+                        <div class="color txt">Black</div>
+                    </div>
+
+                    <div class="color-cont f-cont">
+                        <div class="checkbox"></div>
+                        <div class="color txt">Blue</div>
+                    </div>
+
+                    <div class="color-cont f-cont">
+                        <div class="checkbox"></div>
+                        <div class="color txt">Purple</div>
+                    </div>
+
+                </div>
+
+
+                <button class="findBtn">Find</button>
+
+            </div>
+
+            
+            <!-- Items -->
+            
+            <div class="items-cont">
+
+                <div class="items-upper">
+
+                    <div class="pages">
+                        <% 
+                            const pagesCount = Math.floor(numOfProds / 50)
+                            const first = 1;
+                            let last = pagesCount;
+                            const diff = pagesCount - 2;
+                            const second = 2;
+                            const preLast = last - 1;
+                            currPage = parseInt(currPage)
+
+                            let page1,
+                                page2,
+                                page3;
+
+                            // Choose which pages display on nav
+                            if(currPage == second){
+                                page1 = 2,
+                                page2 = 3,
+                                page3 = 4;
+                            }
+                            // Prelast
+                            else if(currPage == preLast){
+                                page1 = preLast - 2;
+                                page2 = preLast - 1;
+                                page3 = currPage;
+                            }
+                            // First
+                            else if(currPage == first){
+                                page1 = 2
+                                page2 = 3
+                                page3 = 4
+                            }
+                            // Last
+                            else if(currPage == last){
+                                page1 = last - 3
+                                page2 = last - 2
+                                page3 = last - 1
+                            }
+                            // Else
+                            else{
+                                page1 = currPage - 1
+                                page2 = currPage
+                                page3 = currPage + 1
+                            }
+
+
+                            if(diff == 2){
+                                page1 = 2
+                                page2 = 3;
+                                page3 = null;
+                            }
+                            else if(diff == 1){
+                                page1 = null
+                                page2 = null
+                                page3 = 2;
+                            }
+                            else if(diff == 0){
+                                page1 = null
+                                page2 = null
+                                page3 = null
+                            }
+                            else if(diff < 0){
+                                page1 = null
+                                page2 = null
+                                page3 = null
+                                last = null;
+                            }
+
+                            console.log(diff)
+                        %> 
+
+                        <!-- Render nav -->
+                        <a href="<%= `/items?page=1&colors=${colors}&sizes=${sizes}&minp=${minPrice}&maxp=${maxPrice}&gender=${gender}` %>" class="first-page <%= currPage == 1 ? 'currPage' : '' %>">1</a>
+
+                        <% if(page1 != null) { %>
+                            <a
+                                href="<%= `/items?page=${page1}&colors=${colors}&sizes=${sizes}&minp=${minPrice}&maxp=${maxPrice}&gender=${gender}` %>"
+                                class="page <%= currPage == page1 ? 'currPage' : '' %>">
+                                <%= page1 %>
+                            </a>
+                        <% } %>
+
+                        <% if(page2 != null) { %>
+                            <a
+                                href="<%= `/items?page=${page2}&colors=${colors}&sizes=${sizes}&minp=${minPrice}&maxp=${maxPrice}&gender=${gender}` %>"
+                                class="page <%= currPage == page2 ? 'currPage' : '' %>">
+                                <%= page2 %>
+                            </a>
+                        <% } %>
+
+                        <% if(page3 != null) { %>
+                            <a
+                                href="<%= `/items?page=${page3}&colors=${colors}&sizes=${sizes}&minp=${minPrice}&maxp=${maxPrice}&gender=${gender}` %>"
+                                class="page <%= currPage == page3 ? 'currPage' : '' %>">
+                                <%= page3 %>
+                            </a>
+                        <% } %>
+                        
+                        <% if(last != null) { %>
+                            <a href="<%= `/items?page=${pagesCount}&colors=${colors}&sizes=${sizes}&minp=${minPrice}&maxp=${maxPrice}&gender=${gender}` %>" class="last-page <%= currPage == pagesCount ? 'currPage' : '' %>"><%= pagesCount %></a>
+                        <% } %>
+                    </div>
+
+                    <div class="num-of-prod">Number of Products: <%= numOfProds %></div>
+
+                </div>
+
+                <div class="items">
+
+                    <% 
+                        newItems.forEach((item,i) =>{
+                    %> 
+
+                        <div class="item">
+                            <a class="img-a" href="/item?id=<%= item._id.toString()%>"><img src="prodImgs/<%= item.mainImg %>" alt="item"></a>
+                            <a href="/item?id=<%= item._id.toString()%>" class="item-name"><%= item.name %></a>
+                            <div class="item-price"><%= item.price %>$</div>
+                        </div>
+
+                    <% }) %>
+
+                </div>
+            </div>
+
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

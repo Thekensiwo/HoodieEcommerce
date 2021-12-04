@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+@font-face {
+  font-family: "Sans2";
+  src: url(./Sansation_Bold.ttf), url(./Sansation_Regular.ttf);
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: 'Sans1';
+  src: url("./sansation_regular-webfont.woff2") format("woff2"), url("./sansation_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.blue {
+  color: #1877F2;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  --itemWidth: 150px;
+}
+
+body {
+  height: 100vh;
+  min-height: 100vh;
+  background: #14171B;
+  position: relative;
+  font-family: "Sarpanch", sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #12171b;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #20262e;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #242a33;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+header {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 3rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: #14171B;
+  font-family: "Montserrat";
+  padding-bottom: 4rem;
+  margin-top: 9rem;
+}
+
+main form {
+  width: 100%;
+  height: 100%;
+  color: #EFF2F7;
+}
+
+main form h2 {
+  font-family: "Sans1";
+  font-weight: 400;
+  font-size: 6rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+main form .cont {
+  width: 80%;
+  height: 48px;
+  background: #1B1E23;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+main form .cont .svg-cont {
+  -webkit-box-flex: 1.2;
+      -ms-flex: 1.2;
+          flex: 1.2;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 5px 0px 0px 5px;
+}
+
+main form .cont .svg-cont svg {
+  width: 25px;
+  height: 25px;
+}
+
+main form .cont .input-cont {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+main form .cont .input-cont input {
+  width: 100%;
+  height: 100%;
+  background: #1B1E23;
+  border: none;
+  outline: none;
+  border-radius: 0px 5px 5px 0px;
+  padding-left: 1rem;
+  color: #EFF2F7;
+  font-size: 1.6rem;
+  font-family: "Montserrat";
+}
+
+main form .cont .input-cont .placeholder {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(239, 242, 247, 0.5);
+  font-size: 1.6rem;
+  font-family: "Montserrat";
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+main form .email-cont {
+  margin-top: 5rem;
+}
+
+main form .password-cont {
+  margin-top: 4rem;
+}
+
+main form .forgot {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3rem;
+  margin-top: .8rem;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  color: #b4b4b4;
+}
+
+main form .forgot:hover {
+  color: #bdbdbd;
+}
+
+main form .submitBtn {
+  width: 70%;
+  height: 50px;
+  background: #1877F2;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  font-size: 2.7rem;
+  color: #EFF2F7;
+  font-family: "Sans1";
+  border: none;
+  outline: none;
+  margin-top: 9rem;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+main form .submitBtn:hover {
+  background: #0d65d8;
+}
+
+main form .register {
+  display: block;
+  text-decoration: none;
+  color: #EFF2F7;
+  text-align: center;
+  font-size: 1.9rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.placeholder-on {
+  top: -18% !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  color: #EFF2F7 !important;
+  font-size: 1.35rem !important;
+}
+
+/* --- Media Queries --- */
+@media (min-width: 520px) {
+  header {
+    padding: 3rem 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main {
+    width: 85%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background: #14171B;
+    -webkit-box-shadow: 0px 2px 25px 2px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 2px 25px 2px rgba(0, 0, 0, 0.35);
+    padding-bottom: 4rem;
+    margin-top: -4rem;
+  }
+  main form h2 {
+    font-size: 7rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  main form .cont {
+    width: 70%;
+    height: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+  }
+  main form .cont .svg-cont {
+    -webkit-box-flex: 1.2;
+        -ms-flex: 1.2;
+            flex: 1.2;
+    border-radius: 5px 0px 0px 5px;
+  }
+  main form .cont .svg-cont svg {
+    width: 25px;
+    height: 25px;
+  }
+  main form .cont .input-cont {
+    -webkit-box-flex: 8;
+        -ms-flex: 8;
+            flex: 8;
+  }
+  main form .cont .input-cont input {
+    border-radius: 0px 5px 5px 0px;
+    padding-left: 1rem;
+    font-size: 1.6rem;
+  }
+  main form .cont .input-cont .placeholder {
+    left: 1rem;
+    font-size: 1.6rem;
+  }
+  main form .email-cont {
+    margin-top: 5rem;
+  }
+  main form .password-cont {
+    margin-top: 4rem;
+  }
+  main form .forgot {
+    width: 70%;
+    font-size: 1.3rem;
+    margin-top: .8rem;
+  }
+  main form .submitBtn {
+    width: 70%;
+    font-size: 2.7rem;
+    margin-top: 9rem;
+  }
+  main form .register {
+    font-size: 1.9rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 650px) {
+  header {
+    padding: 3rem 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 750px) {
+  main {
+    width: 62%;
+    border-radius: 14px;
+    -webkit-box-shadow: 0px 2px 25px 2px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 2px 25px 2px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@media (min-width: 950px) {
+  main {
+    width: 50%;
+    padding-bottom: 4rem;
+    margin-top: -4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 3rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main {
+    width: 37%;
+    padding-bottom: 4rem;
+    margin-top: -4rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  main {
+    width: 28%;
+    padding-bottom: 4rem;
+    margin-top: -4rem;
+  }
+}
+
+@media (min-width: 1720px) {
+  main {
+    width: 25%;
+    padding-bottom: 4rem;
+    margin-top: -4rem;
+  }
+}
+/*# sourceMappingURL=login.css.map */

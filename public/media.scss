@@ -1,0 +1,1844 @@
+@import 'vars';
+
+@media(min-width: 470px){
+
+
+    header{
+        
+        .back-cont{
+            margin-top: .7rem;
+            width: 52px;
+            height: 52px;
+        }
+    }
+    
+    form{
+        padding-top: 5rem;
+
+
+
+        /* --- Steps --- */
+        .steps-cont{
+            position: absolute;
+            display: grid;
+            place-items: center;
+            width: 100%;
+
+
+            .steps{
+                width: 60%;
+                
+                .step{
+                    width: 50px;
+                    height: 50px;
+                    background: #20242B;
+                    font-size: 3rem;
+                }
+
+                .progress-line{
+                    width: 100%;
+                    height: 3px;
+                }
+            }
+        }
+
+
+
+
+        h3{
+            text-align: center;
+            font-size: 3.7rem;
+        }   
+
+
+        $wid: 80%;
+
+
+
+
+        /* --- Order Container --- */
+
+        .order-cont{
+            top: 20%;
+            width: $wid;
+
+
+
+            .cart-items{
+                $margLeft: 20px;
+                margin-top: 5rem;
+                
+                .cart-item{
+                    padding: .1rem 0rem;
+                    grid-template-columns: 1fr 2fr 1.05fr .7fr;
+                    margin-top: 2rem;
+                    
+                    .item-img{
+                        grid-area: img;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 4px;
+                    }
+        
+                    a,p{
+                        padding-left: .2rem;
+                    }
+                    a{
+                        grid-area: a;
+                        font-size: 1.8rem;
+                    }
+        
+                    p{
+                        grid-area: p;
+                        font-size: 1.8rem;
+                    }
+        
+                    .quantity-cont{
+                        grid-area: quantity;
+                        padding: .2rem 1rem;
+                        margin-left: .9rem;
+                        border-radius: 15px;
+                        font-size: 2.5rem;
+                        
+                        .minus{
+                            font-size: 3rem;
+                        }
+        
+                        .quant-select{
+                            padding: .5rem 0rem;
+                            opacity: 1;
+                            border-radius: 0px 0px 15px 15px;
+        
+                            a{
+                                padding: .4rem 0rem;
+                            }
+                        }
+                    }
+        
+                    .delete-item{
+                        grid-area: delete;
+                        height: 100%;
+                        width: 100%;
+        
+                        svg{
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+        
+                }
+            }
+
+
+            h5{
+                font-size: 2rem;
+                margin-top: 4rem;
+            }
+
+            .discount-cont{
+                width: 360px;
+                height: 36px;
+                padding: .1rem .2rem;
+                margin-top: 1.5rem;
+
+                .discount{
+                    flex: 1;
+                    height: 100%;
+                    border-radius: 2px;
+                    padding-left: .8rem;
+                }
+
+                button{
+                    margin-left: .3rem;
+                    padding: 0rem 1.4rem;
+                    border-radius: 2px;
+                    font-weight: 500;
+                    font-size: 1.5rem;
+                }
+            }
+
+
+            .total-cont{
+                width: 100%;
+                margin-top: 4rem;
+                font-family: "Montserrat";
+
+                h4{
+                    font-size: 2.5rem;
+                }
+
+                .total{
+                    font-size: 2.2rem;
+                }
+            }
+
+            .btns{
+                width: 100%;
+                margin-top: 2rem;
+
+                .delivery-btn{
+                    width: 160px;
+                    height: 45px;
+                    border-radius: 4px;
+                    font-size: 2rem;
+                    font-weight: 600;
+
+                    svg{
+
+                    }
+
+                    div{
+                        padding-left: 1.5rem;
+                    }
+                }
+
+                .remove-all{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 4px;
+
+                    svg{
+                        width: 27px;
+                        height: 27px;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+        
+
+        /* --- Payment --- */
+
+        .payment-cont{
+            top: 20%;
+            left: 50%;
+            width: $wid;
+
+            .payment-methods{
+                margin-top: 1rem;
+
+                .payment-method-cont{
+                    width: 76%;
+                    margin-top: 2rem;
+                    font-size: 2.8rem;
+
+                    h5{
+                        padding-left: 2rem;
+                    }
+
+                    .radio{
+                        width: 20px;
+                        height: 20px;
+                        box-shadow: 0px 0px 0px 4px $primaryBg,
+                                    0px 0px 0px 6px #30343a;
+                    }
+
+/*                     .payment-method-paypal{
+                        box-shadow: 0px 0px 0px 4px $primaryBg,
+                        0px 0px 0px 6px $blu;
+                    } */
+                }
+                
+                .payment-icon-cont{
+                    width: 55px;
+                    height: 55px;
+                    
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .total-cont{
+                width: 100%;
+                color: $whi;
+                font-size: 2.6rem;
+                margin-top: 8rem;
+                font-family: "Montserrat";
+            }
+
+            button{
+                width: 230px;
+                height: 50px;
+                border-radius: 4px;
+                font-size: 2.3rem;
+                font-weight: 700;
+                margin-top: 3rem;
+
+                svg{
+                    margin-left: 1.9rem;
+                    width: 37px;
+                    height: 37px;
+                }
+
+                div{
+                    padding-left: 2rem;
+                }
+            }
+        }
+
+
+
+        /* --- Delivery --- */
+
+        .delivery-cont{
+            top: 20%;
+            width: $wid;
+
+            input{
+                padding-left: .8rem;
+                width: 100%;
+                height: 35px;
+                border-radius: 3px;
+            }
+
+            label{
+                width: 70%;
+
+                div{
+                    font-size: 1.5rem;
+                    padding-bottom: .9rem;
+                    font-weight: 400;
+                }
+            }
+
+            .inputs{
+
+
+                .cont:first-child{
+                    margin-top: 1rem;
+                }
+
+                .cont:not(:first-child){
+                    margin-top: 1.5rem;
+                }
+
+
+                .city-cont{
+                    display: grid;
+                    grid-template-columns: 70% 1fr 25%;
+                    grid-template-rows: 1fr;
+                    grid-template-areas: "city . code";
+
+                    label{
+                        width: 100%;
+                    }
+
+                    .city-label{
+                        grid-area: city;
+
+                        input{
+                            width: 100%;
+                        }
+                    }
+
+                    .code-label{
+                        grid-area: code;
+                        margin-top: 0rem;
+
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+
+
+
+
+
+                .options-cont{
+
+                    label{
+                        margin-top: 1.5rem;
+
+                        .delivery-method{
+                            width: 20px;
+                            height: 20px;
+                            
+                        }
+
+                        p{
+                            font-size: 1.6rem;
+                            padding-left: 1.2rem;
+                        }
+                    }
+                }
+
+                .delivery-total-cont{
+                    padding-top: 2rem;
+                    font-family: "Montserrat";
+
+                    h4{
+                        font-size: 2.8rem;
+                    }
+
+                    .delivery-total{
+                        font-size: 2rem;
+                    }
+                }
+
+                button{
+                    width: 220px;
+                    height: 48px;
+                    border-radius: 4px;
+                    font-size: 2rem;
+                    margin-top: 3rem;
+
+                    svg{
+                        width: 35px;
+                        height: 35px;
+                        margin-left: 2rem;
+                    }
+
+                    span{
+                        padding-left: 2rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 600 --- */
+
+@media(min-width: 600px){
+
+
+    header{
+        
+        .back-cont{
+            margin-top: 1rem;
+            margin-left: 1rem;
+            width: 55px;
+            height: 55px;
+        }
+    }
+    
+    form{
+        padding-top: 5rem;
+
+
+
+        /* --- Steps --- */
+        .steps-cont{
+            width: 100%;
+
+
+            .steps{
+                width: 50%;
+                
+                .step{
+                    width: 55px;
+                    height: 55px;
+                    background: #20242B;
+                    font-size: 3rem;
+                }
+
+                .progress-line{
+                    width: 100%;
+                    height: 3px;
+                }
+            }
+        }
+
+
+
+
+        h3{
+            text-align: center;
+            font-size: 4.5rem;
+        }   
+
+
+        $wid: 65%;
+        /* --- Order Container --- */
+
+        .order-cont{
+            top: 20%;
+            width: $wid;
+        }
+
+
+        .payment-cont{
+
+            button{
+                width: 240px;
+                height: 54px;
+                border-radius: 4px;
+                font-size: 2.5rem;
+
+                svg{
+                    margin-left: 1.9rem;
+                    width: 37px;
+                    height: 37px;
+                }
+
+                div{
+                    padding-left: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 750 --- */
+
+@media(min-width: 750px){
+
+
+    header{
+        
+        .back-cont{
+            display: none;
+        }
+
+        .logo{
+            display: block;
+            margin-top: 2rem;
+            margin-left: 1rem;
+        }
+    }
+    
+    form{
+
+
+        /* --- Steps --- */
+        .steps-cont{
+            .steps{
+                width: 45%;
+
+                .step{
+
+                    .step-desc{
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+
+
+
+        h3{
+            font-size: 4.5rem;
+        }   
+
+
+        $wid: 50%;
+        /* --- Order Container --- */
+
+        .order-cont{
+            width: $wid;
+
+            .cart-items{
+
+                .cart-item{
+                    grid-template-columns: .7fr 2.3fr 1.05fr .7fr;
+
+                    a,p{
+                        padding-left: .9rem;
+                    }
+
+                    a{
+                        font-size: 2rem;
+                    }
+
+                    .quantity-cont{
+                        width: 90%;
+                        justify-self: center;
+                    }
+                }
+            }
+        }
+
+
+        .delivery-cont{
+            width: 65%;
+            .inputs{
+
+                button{
+                    width: 230px;
+                    height: 50px;
+                    border-radius: 4px;
+                    font-size: 2.4rem;
+                    margin-top: 3rem;
+
+                    svg{
+                        width: 35px;
+                        height: 35px;
+                        margin-left: 2rem;
+                    }
+
+                    span{
+                        padding-left: 2.5rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+
+
+        .payment-cont{
+            .payment-methods{
+                .payment-method-cont{
+                    margin: 0px;
+                    margin-top: 2rem;
+                    width: 50%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+    
+            .total-cont{
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            button{
+                width: 250px;
+                height: 58px;
+                border-radius: 4px;
+                font-size: 2.5rem;
+    
+                svg{
+                    margin-left: 1.9rem;
+                    width: 37px;
+                    height: 37px;
+                }
+    
+                div{
+                    padding-left: 2.5rem;
+                }
+            }
+        }
+    }
+
+
+    .fail-cont{
+        .notLogged-info{
+            font-size: 3rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 890 --- */
+
+@media(min-width: 890px){
+
+    
+    form{
+
+
+        /* --- Steps --- */
+        .steps-cont{
+            .steps{
+                width: 45%;
+            }
+        }
+
+
+        $wid: 52%;
+        /* --- Order Container --- */
+
+        .order-cont{
+            width: $wid;
+
+            .cart-items{
+
+                .cart-item{
+
+                    .quantity-cont{
+                        width: 80%;
+                    }
+                }
+            }
+
+
+            
+            .discount-cont{
+                width: 72%;
+                height: 40px;
+            }
+
+            .btns{
+
+                .delivery-btn{
+                    width: 200px;
+                    font-size: 2.15rem;
+                    svg{
+                        margin-left: -1rem;
+                    }
+                    div{
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 1000 --- */
+
+@media(min-width: 1000px){
+
+    
+    form{
+        padding-top: 5rem;
+        position: relative;
+
+
+
+
+        /* --- Steps --- */
+        .steps-cont{
+            .steps{
+                width: 35%;
+            }
+        }
+
+
+
+
+        h3{
+            text-align: center;
+            font-size: 4.5rem;
+        }   
+
+
+        $wid: 45%;
+        /* --- Order Container --- */
+
+        .order-cont{
+            width: $wid;
+
+            .cart-items{
+
+                .cart-item{
+                    grid-template-columns: .7fr 2.3fr 1.05fr .7fr;
+
+                    a,p{
+                        padding-left: .9rem;
+                    }
+
+                    .quantity-cont{
+                        width: 80%;
+                        justify-self: center;
+                    }
+                }
+            }
+
+
+            
+            .discount-cont{
+                width: 72%;
+                height: 40px;
+            }
+
+            .btns{
+
+                .delivery-btn{
+                    width: 200px;
+                    font-size: 2.15rem;
+                    svg{
+                        margin-left: -1rem;
+                    }
+                    div{
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        }
+
+
+
+        .delivery-cont{
+            width: 50%;
+            .inputs{
+
+                .delivery-total-cont{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: $whi;
+                    padding-top: 2rem;
+    
+                    h4{
+                        font-size: 2.8rem;
+                    }
+    
+                    .delivery-total{
+                        font-size: 3rem;
+                    }
+                }
+
+                button{
+                    width: 240px;
+                    height: 54px;
+                    border-radius: 4px;
+                    font-size: 2.4rem;
+                    margin-top: 3rem;
+
+                    svg{
+                        width: 35px;
+                        height: 35px;
+                        margin-left: 2rem;
+                    }
+
+                    span{
+                        padding-left: 2.4rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+
+
+        .payment-cont{
+            .payment-methods{
+                .payment-method-cont{
+                    margin: 0px;
+                    width: 45%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 4rem;
+                }
+            }
+    
+            .total-cont{
+                width: 45%;
+                margin-left: auto;
+                margin-right: auto;
+        
+                h4{
+                    font-size: 3rem;
+                }
+    
+                .total{
+                    font-size: 3rem;
+                }
+            }
+    
+            button{
+                width: 260px;
+                height: 60px;
+                border-radius: 4px;
+                font-size: 2.5rem;
+                margin-top: 5rem;
+    
+                svg{
+                    margin-left: 2rem;
+                    width: 42px;
+                    height: 42px;
+                }
+    
+                div{
+                    margin-left: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 1230 --- */
+
+@media(min-width: 1230px){
+
+    
+    form{
+        padding-top: 5rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 37% 63%;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". steps";
+
+
+        /* --- Steps --- */
+        .steps-cont{
+            grid-area: steps;
+            position: relative;
+            .steps{
+                width: 45%;
+
+                .step{
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+
+
+
+
+        h3{
+            text-align: left;
+            font-size: 4.5rem;
+        }   
+
+
+        $wid: 37%;
+
+
+
+
+
+        /* --- Delivery --- */
+
+        .delivery-cont{
+            position: absolute;
+            order: 0;
+            flex: 1;
+            width: $wid;
+            height: 100%;
+            left: 0%;
+            transform: translateX(0);
+            top: 0%;
+            padding-left: 30px;
+            padding-top: 12rem;
+
+            .inputs{
+                margin-top: 2.2rem;
+
+                .city-cont{
+
+                    .city-label{
+                        input{
+                            width: 90%;
+                        }
+                    }
+                }
+
+                .cont{
+                    margin-top: 2rem !important;
+
+                    label{
+                        div{
+                            font-size: 1.7rem;
+                        }
+                        input{
+                            width: 90%;
+                            height: 38px;
+                        }
+                    }
+                }
+
+                button{
+                    margin-left: 0px;
+                    width: 220px;
+                    height: 50px;
+
+                    span{
+                        font-size: 2.4rem;
+                    }
+                }
+
+
+                .options-cont{
+                    margin-top: 2rem !important;
+                    
+                    label{
+                        margin-top: 2rem;
+                        .delivery-method{
+                            
+                        }
+                    }
+                }
+
+                .delivery-total-cont{
+                    font-family: "Montserrat";
+
+                    h4{
+                        font-size: 3.2rem;
+                        font-weight: 500;
+                    }
+
+                    .delivery-total{
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+        /* --- Payment --- */
+
+        .payment-cont{
+            position: absolute;
+            width: $wid;
+            height: 100%;
+            left: 0%;
+            transform: translateX(0);
+            top: 0%;
+            padding-left: 30px;
+            padding-top: 12rem;
+
+
+
+            .payment-methods{
+                margin-top: 3rem;
+
+                .payment-method-cont{
+                    width: 70%;
+                    margin: 0;
+                    margin-top: 3rem;
+                }
+            }
+
+            .total-cont{
+                font-size: 3.2rem;
+                width: 70%;
+                margin: 0;
+                margin-top: 8rem;
+                .total{
+                    font-size: 3rem;
+                }
+            }
+            
+            button{
+                margin-left: 0px;
+                width: 250px;
+
+                div{
+                    padding-left: 2.2rem;
+                }
+            }
+        }
+
+
+
+
+
+        
+
+        /* --- Order --- */
+
+        .order-cont{
+            position: absolute;
+            order: 0;
+            flex: 1;
+            width: $wid;
+            height: 100%;
+            left: 0%;
+            transform: translateX(0);
+            top: 0%;
+            padding-left: 30px;
+            padding-top: 12rem;
+
+            .cart-items{
+
+                .cart-item{
+                    width: 100%;  
+
+                    .quantity-cont{
+                        width: 80%;
+                    }
+                }
+            }
+
+
+            
+            .discount-cont{
+                width: 70%;
+                height: 40px;
+
+                button{
+                    font-size: 1.7rem;
+                }
+            }
+
+            .total-cont{
+                width: 100%;
+                h4{
+                    font-size: 2.8rem;
+                }
+
+                .total{
+                    font-size: 2.8rem;
+                }
+            }
+
+            .btns{
+
+                .delivery-btn{
+                    width: 200px;
+                    font-size: 2.15rem;
+                    svg{
+                        margin-left: -1rem;
+                    }
+                    div{
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .fail-cont{
+    
+        .notLogged-info{
+            font-size: 3rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 1330 --- */
+
+@media(min-width: 1330px){
+
+    
+    form{
+        .steps-cont{
+            .steps{
+
+                .step{
+                    width: 80px;
+                    height: 80px;
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 1450 --- */
+
+@media(min-width: 1450px){
+
+    
+    form{
+        .steps-cont{
+            .steps{
+                width: 40%;
+
+                .step{
+                    width: 80px;
+                    height: 80px;
+                    font-size: 4rem;
+
+                    .step-desc{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        h3{
+            font-size: 5rem;
+        }
+
+
+
+
+
+        /* --- Delivery --- */
+
+        .delivery-cont{
+            width: 35%;
+
+            .inputs{
+                margin-top: 2.2rem;
+
+                .city-cont{
+
+                    .city-label{
+                        input{
+                            width: 90%;
+                            height: 40px;
+                        }
+                    }
+                }
+
+                .cont{
+
+                    label{
+                        div{
+                            font-size: 1.7rem;
+                        }
+                        input{
+                            width: 90%;
+                            height: 40px;
+                        }
+                    }
+                }
+
+                button{
+                    width: 220px;
+                    height: 50px;
+
+                    span{
+                        font-size: 2.4rem;
+                    }
+                }
+
+
+                .options-cont{
+                    margin-top: 2rem !important;
+                    
+                    label{
+                        margin-top: 2rem;
+                        .delivery-method{
+                            
+                        }
+                    }
+                }
+
+                .delivery-total-cont{
+                    font-family: "Montserrat";
+
+                    h4{
+                        font-size: 3.2rem;
+                        font-weight: 500;
+                    }
+
+                    .delivery-total{
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+        }
+
+        /* --- Payment --- */
+
+        .payment-cont{
+
+            .payment-methods{
+                .payment-method-cont{
+
+                    .payment-icon-cont{
+                        width: 65px;
+                        height: 65px;
+                        
+                        svg{
+                            width: 35px;
+                            height: 35px;
+                        }
+                    }
+                }
+            }
+            
+            button{
+                margin-left: 0px;
+                width: 240px;
+                height: 58px;
+                margin-top: 4rem;
+
+                svg{
+                    margin-left: 2.2rem;
+                }
+                div{
+                    padding-left: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 1600 --- */
+
+@media(min-width: 1600px){
+
+    
+    header{
+        .logo{
+            margin-left: 2rem;
+        }
+    }
+
+    form{
+        .steps-cont{
+            .steps{
+                width: 40%;
+
+                .step{
+                    width: 80px;
+                    height: 80px;
+                    font-size: 4rem;
+                }
+            }
+        }
+
+        h3{
+            font-size: 6rem;
+        }
+
+
+
+        .order-cont{
+            width: 34%;
+            
+
+            .discount-cont{
+                height: 42px;
+                .discount{
+                    font-size: 1.7rem;
+                }
+            }
+            
+            .btns{
+                .delivery-btn{
+                    width: 220px;
+                    height: 50px;
+                    font-size: 2.3rem;
+                    
+                    svg{
+                        width: 37px;
+                        height: 37px;
+                        margin-right: .5rem;
+                    }
+
+                    div{
+
+                    }
+                }
+
+                .remove-all{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+
+
+        /* --- Delivery --- */
+
+        .delivery-cont{
+            width: 35%;
+
+            .inputs{
+
+
+                .options-cont{
+                    margin-top: 2rem !important;
+                    
+                    label{
+                        margin-top: 2.5rem;
+
+                        p{
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+
+                .delivery-total-cont{
+                    font-family: "Montserrat";
+
+                    h4{
+                        font-size: 3.2rem;
+                        font-weight: 500;
+                    }
+
+                    .delivery-total{
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        
+        /* --- Payment --- */
+
+        .payment-cont{
+
+            .payment-methods{
+                .payment-method-cont{
+                    width: 70%;
+                    font-size: 3.2rem;
+                }
+            }
+
+
+            .total-cont{
+    
+                h4{
+                    font-size: 3.4rem;
+                }
+    
+                .total{
+                    font-size: 3.2rem;
+                }
+            }
+            
+            button{
+                width: 250px;
+                height: 64px;
+                font-size: 2.5rem;
+
+                svg{
+                    width: 39px;
+                    height: 39px;
+                    margin-left: 2.2rem;
+                }
+                div{
+                    padding-left: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 1900 --- */
+
+@media(min-width: 1900px){
+
+    
+    form{
+        .steps-cont{
+            .steps{
+                width: 42%;
+
+                .step{
+                    width: 95px;
+                    height: 95px;
+                    font-size: 5.2rem;
+                }
+            }
+        }
+
+        h3{
+            font-size: 6rem;
+        }
+
+
+        .order-cont,.delivery-cont,.payment-cont{
+            margin-left: 1rem;
+        }
+
+
+
+
+        /* --- Order --- */ 
+
+        .order-cont{
+            width: 34%;
+            
+
+            .cart-items{
+                $margLeft: 20px;
+                margin-top: 5rem;
+                
+                .cart-item{
+                    padding: .1rem 0rem;
+                    grid-template-columns: max-content 2fr .8fr .5fr;
+                    grid-template-rows: 1.4fr 1fr;
+                    grid-template-areas: "img a quantity delete"
+                                        "img p quantity delete";
+                    margin-top: 2rem;
+                    
+                    .item-img{
+                        width: 72px;
+                        height: 72px;
+                        border-radius: 4px;
+                    }
+        
+                    a{
+                        padding-left: 2rem;
+                    }
+
+                    a{
+                        font-size: 2.5rem;
+                    }
+        
+                    .price-changes-cont{
+                        font-size: 2rem;
+
+                        .item-price{
+                            padding-left: 1rem;
+                        }
+                    }
+        
+                    .quantity-cont{
+                        grid-area: quantity;
+                        color: $whi;
+                        padding: .2rem 1rem;
+                        margin-left: .9rem;
+                        border-radius: 8px;
+                        font-size: 3rem;
+
+                        .plus,.minus{
+                            width: 50px;
+                            height: 40px;
+                        }
+        
+                        .quant-select{
+                            padding: .5rem 0rem;
+                            border-radius: 0px 0px 15px 15px;
+                        }
+                    }
+        
+                    .delete-item{
+                    
+                        svg{
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+        
+                }
+            }
+
+
+
+            h5{
+                font-size: 2.4rem;
+            }
+
+            .discount-cont{
+                height: 45px;
+                .discount{
+
+                }
+            }
+            
+            .btns{
+                .delivery-btn{
+                    width: 220px;
+                    height: 50px;
+                    font-size: 2.3rem;
+                    
+                    svg{
+                        width: 37px;
+                        height: 37px;
+                        margin-right: .5rem;
+                    }
+
+                    div{
+
+                    }
+                }
+
+                .remove-all{
+                    width: 50px;
+                    height: 50px;
+
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+        /* --- Delivery --- */
+
+        .delivery-cont{
+            width: 30%;
+
+            .inputs{
+
+
+                .cont{
+                    
+                    label{
+                        div{
+                            font-size: 1.9rem;
+                        }
+                    }
+                }
+
+                .options-cont{
+                    margin-top: 3rem !important;
+                    
+                    label{
+                        margin-top: 2.8rem;
+
+                        .delivery-method{
+                            width: 20px;
+                            height: 20px;
+                            box-shadow: 0px 0px 0px 5px $primaryBg,
+                            0px 0px 0px 7px #30343a;
+                        }
+                        p{
+                            font-size: 2.1rem;
+                            padding-left: 1.9rem;
+                        }
+                    }
+                }
+
+                .delivery-total-cont{
+
+                    h4{
+                        font-size: 3.7em;
+                    }
+
+                    .delivery-total{
+                        font-size: 3.4rem;
+                    }
+                }
+
+
+                button{
+                    width: 250px;
+                    height: 55px;
+
+                    svg{
+                        width: 38px;
+                        height: 38px;
+                    }
+
+                    span{
+                        margin-left: .3rem;
+                        font-size: 2.7rem;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        
+        /* --- Payment --- */
+
+        .payment-cont{
+            
+            button{
+                width: 250px;
+                height: 56px;
+                font-size: 2.7rem;
+
+                svg{
+                    width: 42px;
+                    height: 42px;
+                }
+                div{
+                }
+            }
+        }
+    }
+}

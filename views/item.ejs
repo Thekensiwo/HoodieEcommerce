@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="item.css">
+    <script src="scripts/itemScript.js" defer type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <%- include('./partials/header') %>
+
+        <!-- Main -->
+
+        <main>
+
+
+            <!-- Item container -->
+            <div class="item-cont">
+
+                <div class="main-imgs">
+                    <div class="main-img-cont">
+                        <img src="/prodImgs/<%= item.mainImg %>" class="mainimg" alt="item">
+                    </div>
+
+                    <div class="item-images">
+
+                        <% if(item.sideImgs.length == 0) { %>
+                            
+                            <div class="item-img img1"></div>
+                            <div class="item-img img2"></div>
+                            <div class="item-img img3"></div>
+
+                        <% } else {%>
+
+                            <div class="item-img img0">
+                                <img src="/prodImgs/<%= item.mainImg %>" class="active-img" alt="img">
+                            </div>
+                            
+                            <% item.sideImgs.forEach((item, i) =>{ %>
+
+                                    <div class="item-img img<%= i+1 %>">
+                                        <img src="/prodImgs/<%= item %>" alt="img">
+                                    </div>
+                                    
+                            <% }) %>
+
+                        <% } %>
+                    </div>
+                </div>
+
+                <div class="item-details">
+
+                    <h2 class="item-name"><%= item.name %></h2>
+                    
+                    <% if(item.isOnSale){ %>
+                        <h3 class="item-price" data-price="<%=item.salePrice%>">
+                            <%=item.salePrice%>$
+                            <div class="oldPrice"><%=item.price%>$</div>
+                        </h3>
+                    <% }else{ %>
+                        <h3 class="item-price" data-price="<%= item.price %>"><%= item.price %>$</h3>
+                    <% } %>
+
+                    <p class="size">Size</p>
+                    <div class="sizes">
+
+                        <%
+                            // Sort sizes
+                            const sizes = ["S","M","L","XL"]
+                            let newSizes = []
+
+                            sizes.forEach(siz =>{
+                                if(item.sizes.includes(siz)){
+                                    newSizes.push(siz)
+                                }
+                            })
+                        %>
+                        <% sizes.forEach(size =>{ %>
+                            <div class="size-cont <%= !item.sizes.includes(size) ? "sizeOff" : ""%>" data-size="<%= size %>"><%= size %></div>
+                        <% }) %>
+                    </div>
+
+                    <p class="colour">Color</p>
+                    <div class="colours">
+
+                        <% item.colours.forEach(color =>{ %>
+                            <div class="color-cont <%= color %>" data-color="<%= color %>"></div>
+                        <% }) %>
+                    </div>
+
+                    <a data-class="addToCart-Btn" class="addToCart-Btn">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path
+                                    d="M29.8784 30.9482L27.4463 7.78734C27.3953 7.30248 26.9866 6.93431 26.499 6.93431H21.9277V5.89208C21.9277 2.64331 19.2844 0 16.0357 0C12.7866 0 10.1433 2.64331 10.1433 5.89208V6.93431H5.57206C5.08451 6.93431 4.67582 7.30248 4.62479 7.78734L2.19267 30.9482C2.16459 31.2165 2.25175 31.4843 2.43217 31.685C2.61284 31.8854 2.87016 31.9999 3.13993 31.9999H28.9309C29.2009 31.9999 29.4582 31.8854 29.6387 31.685C29.8196 31.4843 29.9065 31.2165 29.8784 30.9482ZM12.0481 5.89208C12.0481 3.6936 13.8369 1.90478 16.0357 1.90478C18.2341 1.90478 20.023 3.6936 20.023 5.89208V6.93431H12.0481V5.89208ZM4.19755 30.0952L6.42972 8.83909H10.1433V10.938C10.1433 11.4638 10.5699 11.8904 11.0957 11.8904C11.6216 11.8904 12.0481 11.4638 12.0481 10.938V8.83909H20.023V10.938C20.023 11.4638 20.4495 11.8904 20.9753 11.8904C21.5012 11.8904 21.9277 11.4638 21.9277 10.938V8.83909H25.6414L27.8735 30.0952H4.19755Z"
+                                    fill="#14171B" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="32" height="32" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span>Add to Cart</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- Details about item -->
+            <div class="item-info-cont">
+
+                <div class="item-info-nav">
+                    <a class="nav-desc" data-type="Description">Description</a>
+                    <a data-type="Delivery">Delivery</a>
+                    <a data-type="Returns">Returns</a>
+                    <div class="nav-underline"></div>
+                </div>
+
+                <div class="item-info">
+
+                    <div class="desc item-detail">
+                        <div class="product-code">
+                            Product code: <span class="p-code"><%= item.code %></span>
+                        </div>
+                        <div class="content">
+<!--                             Sweatshirt with a fitted, sporty cut made of a pleasant to the touch fabric.<br><br>
+
+                            -unclear capture<br>
+                            -Long Sleeve<br>
+                            -Render an account with the mouse<br>
+                            -spare parts and accessories<br>
+                            -edges finished with stitching<br><br>
+
+                            The product is only available on the Internet. -->
+                            <%= item.description %>
+                        </div>
+                    </div>
+
+                    <div class="delivery item-detail">
+                        Depending on the type of your delivery, your items will be delivered in:<br><br>
+
+                        Express delivery: 1-3 days<br>
+                        Normal delivery: 3-7 days<br><br>
+
+                        If the total price of your order is at least 50$ worth, the delivery will be free
+                    </div>
+
+                    <div class="returns item-detail">
+                        You have the right to demand a return, if:<br><br>
+
+                        -the product don’t have any visible damage/dirtiness<br>
+                        -You got the receipt<br>
+                        -30 days have not passed from the day of purchase<br><br>
+
+                        The process of return will take from 1-2 weeks.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- Related Products -->
+
+            <div class="related-cont">
+
+                <% if(item.gender == 'female') { %>
+                <svg class="related-svg" width="645" height="140" viewBox="0 0 645 140" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M92.2539 0.351562V15H19.0117V61.875H88.8359V76.5234H19.0117V140H0.945312V0.351562H92.2539ZM154.168 37.4609C183.335 37.4609 197.918 51.8815 197.918 80.7227C197.918 84.8242 197.625 89.2188 197.039 93.9062H125.066C125.066 114.87 137.306 125.352 161.785 125.352C173.439 125.352 183.79 124.049 192.84 121.445V136.094C183.79 138.698 172.788 140 159.832 140C124.611 140 107 122.52 107 87.5586C107 54.1602 122.723 37.4609 154.168 37.4609ZM125.066 78.8672H180.535C180.145 60.8984 171.355 51.9141 154.168 51.9141C135.939 51.9141 126.238 60.8984 125.066 78.8672ZM222.234 140V37.4609H234.441L237.469 50.3516C247.299 41.7578 258.009 37.4609 269.598 37.4609C284.441 37.4609 294.565 42.1484 299.969 51.5234C311.102 42.1484 322.397 37.4609 333.855 37.4609C357.423 37.4609 369.207 50.4492 369.207 76.4258V140H351.141V75.4492C351.141 60.1497 344.695 52.5 331.805 52.5C322.169 52.5 313.152 56.9271 304.754 65.7812V140H286.688V75.7422C286.688 60.2474 280.307 52.5 267.547 52.5C257.391 52.5 248.309 56.9271 240.301 65.7812V140H222.234ZM393.719 109.043C393.719 88.0143 407.586 77.5 435.32 77.5C444.24 77.5 453.159 78.151 462.078 79.4531V69.7852C462.078 58.0013 452.866 52.1094 434.441 52.1094C423.895 52.1094 413.087 53.737 402.02 56.9922V42.3438C413.087 39.0885 423.895 37.4609 434.441 37.4609C464.91 37.4609 480.145 48.0729 480.145 69.2969V140H469.988L463.738 129.844C453.517 136.615 442.384 140 430.34 140C405.926 140 393.719 129.681 393.719 109.043ZM435.32 92.1484C419.63 92.1484 411.785 97.6823 411.785 108.75C411.785 119.818 417.97 125.352 430.34 125.352C442.84 125.352 453.419 122.031 462.078 115.391V94.1016C453.159 92.7995 444.24 92.1484 435.32 92.1484ZM528.582 0.351562V140H510.516V0.351562H528.582ZM601.238 37.4609C630.405 37.4609 644.988 51.8815 644.988 80.7227C644.988 84.8242 644.695 89.2188 644.109 93.9062H572.137C572.137 114.87 584.376 125.352 608.855 125.352C620.509 125.352 630.861 124.049 639.91 121.445V136.094C630.861 138.698 619.858 140 606.902 140C571.681 140 554.07 122.52 554.07 87.5586C554.07 54.1602 569.793 37.4609 601.238 37.4609ZM572.137 78.8672H627.605C627.215 60.8984 618.426 51.9141 601.238 51.9141C583.009 51.9141 573.309 60.8984 572.137 78.8672Z"
+                        fill="#EFF2F7" fill-opacity="0.07" />
+                </svg>
+                <% } else { %>
+                    <svg class="related-svg" width="425" height="140" viewBox="0 0 425 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.40625 140V0.351562H23.3555L74.625 116.855L124.918 0.351562H146.891V140H130.777V25.4492L81.168 140H66.9102L16.5195 25.4492V140H0.40625ZM173.258 109.043C173.258 88.0143 187.125 77.5 214.859 77.5C223.779 77.5 232.698 78.151 241.617 79.4531V69.7852C241.617 58.0013 232.405 52.1094 213.98 52.1094C203.434 52.1094 192.626 53.737 181.559 56.9922V42.3438C192.626 39.0885 203.434 37.4609 213.98 37.4609C244.449 37.4609 259.684 48.0729 259.684 69.2969V140H249.527L243.277 129.844C233.056 136.615 221.923 140 209.879 140C185.465 140 173.258 129.681 173.258 109.043ZM214.859 92.1484C199.169 92.1484 191.324 97.6823 191.324 108.75C191.324 119.818 197.509 125.352 209.879 125.352C222.379 125.352 232.958 122.031 241.617 115.391V94.1016C232.698 92.7995 223.779 92.1484 214.859 92.1484ZM308.121 0.351562V140H290.055V0.351562H308.121ZM380.777 37.4609C409.944 37.4609 424.527 51.8815 424.527 80.7227C424.527 84.8242 424.234 89.2188 423.648 93.9062H351.676C351.676 114.87 363.915 125.352 388.395 125.352C400.048 125.352 410.4 124.049 419.449 121.445V136.094C410.4 138.698 399.397 140 386.441 140C351.22 140 333.609 122.52 333.609 87.5586C333.609 54.1602 349.332 37.4609 380.777 37.4609ZM351.676 78.8672H407.145C406.754 60.8984 397.965 51.9141 380.777 51.9141C362.548 51.9141 352.848 60.8984 351.676 78.8672Z" fill="#EFF2F7" fill-opacity="0.07"/>
+                    </svg>                        
+                <% } %>
+
+                <h2>Related Products</h2>
+
+                <div class="track">
+                    <div class="slider">
+
+                        <% relatedItems.forEach(item =>{ %>
+                            <a class="item" href="/item?id=<%= item._id.toString() %>" title="<%= item.name %>">
+                                <img src="/prodImgs/<%= item.mainImg %>" alt="image not found">
+                            </a>
+                        <% }) %>
+
+                    </div>
+
+
+                    <div class="track-btn left">
+
+                        <svg width="62" height="62" viewBox="0 0 62 62" fill="#ccc" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path
+                                    d="M13.3292 30.9997C13.3292 29.8885 13.7534 28.7775 14.6002 27.9304L41.259 1.27175C42.9549 -0.424081 45.7044 -0.424081 47.3995 1.27175C49.0947 2.9669 49.0947 5.71586 47.3995 7.41183L23.8103 30.9997L47.3987 54.5877C49.0939 56.2836 49.0939 59.0322 47.3987 60.7273C45.7036 62.4239 42.9541 62.4239 41.2582 60.7273L14.5994 34.0691C13.7525 33.2215 13.3292 32.1105 13.3292 30.9997Z"
+                                    fill="black" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="62" height="62" fill="white" transform="translate(62) rotate(90)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </div>
+
+                    <div class="track-btn right">
+
+                        <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path
+                                    d="M48.6708 31.0003C48.6708 32.1115 48.2466 33.2225 47.3998 34.0696L20.741 60.7282C19.0451 62.4241 16.2956 62.4241 14.6005 60.7282C12.9053 59.0331 12.9053 56.2841 14.6005 54.5882L38.1897 31.0003L14.6013 7.41228C12.9061 5.71644 12.9061 2.96776 14.6013 1.27275C16.2964 -0.423909 19.0459 -0.423909 20.7418 1.27275L47.4006 27.9309C48.2475 28.7785 48.6708 29.8895 48.6708 31.0003Z"
+                                    fill="black" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="62" height="62" fill="white" transform="translate(0 62) rotate(-90)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- Footer -->
+        <%- include('./partials/footer') %>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+</body>
+
+</html>

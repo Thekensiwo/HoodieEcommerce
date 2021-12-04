@@ -1,0 +1,1161 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+@font-face {
+  font-family: "Sans2";
+  src: url(./Sansation_Bold.ttf), url(./Sansation_Regular.ttf);
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: 'Sans1';
+  src: url("./sansation_regular-webfont.woff2") format("woff2"), url("./sansation_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.blue {
+  color: #1877F2;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  --itemWidth: 150px;
+}
+
+body {
+  height: 100vh;
+  min-height: 100vh;
+  background: #14171B;
+  position: relative;
+  font-family: "Sarpanch", sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #12171b;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #20262e;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #242a33;
+}
+
+@media (min-width: 470px) {
+  header .back-cont {
+    margin-top: .7rem;
+    width: 52px;
+    height: 52px;
+  }
+  form {
+    padding-top: 5rem;
+    /* --- Steps --- */
+    /* --- Order Container --- */
+    /* --- Payment --- */
+    /* --- Delivery --- */
+  }
+  form .steps-cont {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+  form .steps-cont .steps {
+    width: 60%;
+  }
+  form .steps-cont .steps .step {
+    width: 50px;
+    height: 50px;
+    background: #20242B;
+    font-size: 3rem;
+  }
+  form .steps-cont .steps .progress-line {
+    width: 100%;
+    height: 3px;
+  }
+  form h3 {
+    text-align: center;
+    font-size: 3.7rem;
+  }
+  form .order-cont {
+    top: 20%;
+    width: 80%;
+  }
+  form .order-cont .cart-items {
+    margin-top: 5rem;
+  }
+  form .order-cont .cart-items .cart-item {
+    padding: .1rem 0rem;
+    -ms-grid-columns: 1fr 2fr 1.05fr .7fr;
+        grid-template-columns: 1fr 2fr 1.05fr .7fr;
+    margin-top: 2rem;
+  }
+  form .order-cont .cart-items .cart-item .item-img {
+    grid-area: img;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+  }
+  form .order-cont .cart-items .cart-item a, form .order-cont .cart-items .cart-item p {
+    padding-left: .2rem;
+  }
+  form .order-cont .cart-items .cart-item a {
+    grid-area: a;
+    font-size: 1.8rem;
+  }
+  form .order-cont .cart-items .cart-item p {
+    grid-area: p;
+    font-size: 1.8rem;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont {
+    grid-area: quantity;
+    padding: .2rem 1rem;
+    margin-left: .9rem;
+    border-radius: 15px;
+    font-size: 2.5rem;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont .minus {
+    font-size: 3rem;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont .quant-select {
+    padding: .5rem 0rem;
+    opacity: 1;
+    border-radius: 0px 0px 15px 15px;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont .quant-select a {
+    padding: .4rem 0rem;
+  }
+  form .order-cont .cart-items .cart-item .delete-item {
+    grid-area: delete;
+    height: 100%;
+    width: 100%;
+  }
+  form .order-cont .cart-items .cart-item .delete-item svg {
+    width: 30px;
+    height: 30px;
+  }
+  form .order-cont h5 {
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
+  form .order-cont .discount-cont {
+    width: 360px;
+    height: 36px;
+    padding: .1rem .2rem;
+    margin-top: 1.5rem;
+  }
+  form .order-cont .discount-cont .discount {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 100%;
+    border-radius: 2px;
+    padding-left: .8rem;
+  }
+  form .order-cont .discount-cont button {
+    margin-left: .3rem;
+    padding: 0rem 1.4rem;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  form .order-cont .total-cont {
+    width: 100%;
+    margin-top: 4rem;
+    font-family: "Montserrat";
+  }
+  form .order-cont .total-cont h4 {
+    font-size: 2.5rem;
+  }
+  form .order-cont .total-cont .total {
+    font-size: 2.2rem;
+  }
+  form .order-cont .btns {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  form .order-cont .btns .delivery-btn {
+    width: 160px;
+    height: 45px;
+    border-radius: 4px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  form .order-cont .btns .delivery-btn div {
+    padding-left: 1.5rem;
+  }
+  form .order-cont .btns .remove-all {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+  }
+  form .order-cont .btns .remove-all svg {
+    width: 27px;
+    height: 27px;
+  }
+  form .payment-cont {
+    top: 20%;
+    left: 50%;
+    width: 80%;
+  }
+  form .payment-cont .payment-methods {
+    margin-top: 1rem;
+  }
+  form .payment-cont .payment-methods .payment-method-cont {
+    width: 76%;
+    margin-top: 2rem;
+    font-size: 2.8rem;
+    /*                     .payment-method-paypal{
+                        box-shadow: 0px 0px 0px 4px $primaryBg,
+                        0px 0px 0px 6px $blu;
+                    } */
+  }
+  form .payment-cont .payment-methods .payment-method-cont h5 {
+    padding-left: 2rem;
+  }
+  form .payment-cont .payment-methods .payment-method-cont .radio {
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0px 0px 0px 4px #14171B, 0px 0px 0px 6px #30343a;
+            box-shadow: 0px 0px 0px 4px #14171B, 0px 0px 0px 6px #30343a;
+  }
+  form .payment-cont .payment-methods .payment-icon-cont {
+    width: 55px;
+    height: 55px;
+  }
+  form .payment-cont .payment-methods .payment-icon-cont svg {
+    width: 30px;
+    height: 30px;
+  }
+  form .payment-cont .total-cont {
+    width: 100%;
+    color: #EFF2F7;
+    font-size: 2.6rem;
+    margin-top: 8rem;
+    font-family: "Montserrat";
+  }
+  form .payment-cont button {
+    width: 230px;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-top: 3rem;
+  }
+  form .payment-cont button svg {
+    margin-left: 1.9rem;
+    width: 37px;
+    height: 37px;
+  }
+  form .payment-cont button div {
+    padding-left: 2rem;
+  }
+  form .delivery-cont {
+    top: 20%;
+    width: 80%;
+  }
+  form .delivery-cont input {
+    padding-left: .8rem;
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+  }
+  form .delivery-cont label {
+    width: 70%;
+  }
+  form .delivery-cont label div {
+    font-size: 1.5rem;
+    padding-bottom: .9rem;
+    font-weight: 400;
+  }
+  form .delivery-cont .inputs .cont:first-child {
+    margin-top: 1rem;
+  }
+  form .delivery-cont .inputs .cont:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+  form .delivery-cont .inputs .city-cont {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% 1fr 25%;
+        grid-template-columns: 70% 1fr 25%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "city . code";
+  }
+  form .delivery-cont .inputs .city-cont label {
+    width: 100%;
+  }
+  form .delivery-cont .inputs .city-cont .city-label {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: city;
+  }
+  form .delivery-cont .inputs .city-cont .city-label input {
+    width: 100%;
+  }
+  form .delivery-cont .inputs .city-cont .code-label {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: code;
+    margin-top: 0rem;
+  }
+  form .delivery-cont .inputs .city-cont .code-label input {
+    width: 100%;
+  }
+  form .delivery-cont .inputs .options-cont label {
+    margin-top: 1.5rem;
+  }
+  form .delivery-cont .inputs .options-cont label .delivery-method {
+    width: 20px;
+    height: 20px;
+  }
+  form .delivery-cont .inputs .options-cont label p {
+    font-size: 1.6rem;
+    padding-left: 1.2rem;
+  }
+  form .delivery-cont .inputs .delivery-total-cont {
+    padding-top: 2rem;
+    font-family: "Montserrat";
+  }
+  form .delivery-cont .inputs .delivery-total-cont h4 {
+    font-size: 2.8rem;
+  }
+  form .delivery-cont .inputs .delivery-total-cont .delivery-total {
+    font-size: 2rem;
+  }
+  form .delivery-cont .inputs button {
+    width: 220px;
+    height: 48px;
+    border-radius: 4px;
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  form .delivery-cont .inputs button svg {
+    width: 35px;
+    height: 35px;
+    margin-left: 2rem;
+  }
+  form .delivery-cont .inputs button span {
+    padding-left: 2rem;
+    font-weight: 600;
+  }
+}
+
+/* --- 600 --- */
+@media (min-width: 600px) {
+  header .back-cont {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 55px;
+    height: 55px;
+  }
+  form {
+    padding-top: 5rem;
+    /* --- Steps --- */
+    /* --- Order Container --- */
+  }
+  form .steps-cont {
+    width: 100%;
+  }
+  form .steps-cont .steps {
+    width: 50%;
+  }
+  form .steps-cont .steps .step {
+    width: 55px;
+    height: 55px;
+    background: #20242B;
+    font-size: 3rem;
+  }
+  form .steps-cont .steps .progress-line {
+    width: 100%;
+    height: 3px;
+  }
+  form h3 {
+    text-align: center;
+    font-size: 4.5rem;
+  }
+  form .order-cont {
+    top: 20%;
+    width: 65%;
+  }
+  form .payment-cont button {
+    width: 240px;
+    height: 54px;
+    border-radius: 4px;
+    font-size: 2.5rem;
+  }
+  form .payment-cont button svg {
+    margin-left: 1.9rem;
+    width: 37px;
+    height: 37px;
+  }
+  form .payment-cont button div {
+    padding-left: 2.5rem;
+  }
+}
+
+/* --- 750 --- */
+@media (min-width: 750px) {
+  header .back-cont {
+    display: none;
+  }
+  header .logo {
+    display: block;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  form {
+    /* --- Steps --- */
+    /* --- Order Container --- */
+  }
+  form .steps-cont .steps {
+    width: 45%;
+  }
+  form .steps-cont .steps .step .step-desc {
+    font-size: 1.8rem;
+  }
+  form h3 {
+    font-size: 4.5rem;
+  }
+  form .order-cont {
+    width: 50%;
+  }
+  form .order-cont .cart-items .cart-item {
+    -ms-grid-columns: .7fr 2.3fr 1.05fr .7fr;
+        grid-template-columns: .7fr 2.3fr 1.05fr .7fr;
+  }
+  form .order-cont .cart-items .cart-item a, form .order-cont .cart-items .cart-item p {
+    padding-left: .9rem;
+  }
+  form .order-cont .cart-items .cart-item a {
+    font-size: 2rem;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont {
+    width: 90%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  form .delivery-cont {
+    width: 65%;
+  }
+  form .delivery-cont .inputs button {
+    width: 230px;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 2.4rem;
+    margin-top: 3rem;
+  }
+  form .delivery-cont .inputs button svg {
+    width: 35px;
+    height: 35px;
+    margin-left: 2rem;
+  }
+  form .delivery-cont .inputs button span {
+    padding-left: 2.5rem;
+    font-weight: 600;
+  }
+  form .payment-cont .payment-methods .payment-method-cont {
+    margin: 0px;
+    margin-top: 2rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form .payment-cont .total-cont {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form .payment-cont button {
+    width: 250px;
+    height: 58px;
+    border-radius: 4px;
+    font-size: 2.5rem;
+  }
+  form .payment-cont button svg {
+    margin-left: 1.9rem;
+    width: 37px;
+    height: 37px;
+  }
+  form .payment-cont button div {
+    padding-left: 2.5rem;
+  }
+  .fail-cont .notLogged-info {
+    font-size: 3rem;
+  }
+}
+
+/* --- 890 --- */
+@media (min-width: 890px) {
+  form {
+    /* --- Steps --- */
+    /* --- Order Container --- */
+  }
+  form .steps-cont .steps {
+    width: 45%;
+  }
+  form .order-cont {
+    width: 52%;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont {
+    width: 80%;
+  }
+  form .order-cont .discount-cont {
+    width: 72%;
+    height: 40px;
+  }
+  form .order-cont .btns .delivery-btn {
+    width: 200px;
+    font-size: 2.15rem;
+  }
+  form .order-cont .btns .delivery-btn svg {
+    margin-left: -1rem;
+  }
+  form .order-cont .btns .delivery-btn div {
+    padding-left: 2rem;
+  }
+}
+
+/* --- 1000 --- */
+@media (min-width: 1000px) {
+  form {
+    padding-top: 5rem;
+    position: relative;
+    /* --- Steps --- */
+    /* --- Order Container --- */
+  }
+  form .steps-cont .steps {
+    width: 35%;
+  }
+  form h3 {
+    text-align: center;
+    font-size: 4.5rem;
+  }
+  form .order-cont {
+    width: 45%;
+  }
+  form .order-cont .cart-items .cart-item {
+    -ms-grid-columns: .7fr 2.3fr 1.05fr .7fr;
+        grid-template-columns: .7fr 2.3fr 1.05fr .7fr;
+  }
+  form .order-cont .cart-items .cart-item a, form .order-cont .cart-items .cart-item p {
+    padding-left: .9rem;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont {
+    width: 80%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  form .order-cont .discount-cont {
+    width: 72%;
+    height: 40px;
+  }
+  form .order-cont .btns .delivery-btn {
+    width: 200px;
+    font-size: 2.15rem;
+  }
+  form .order-cont .btns .delivery-btn svg {
+    margin-left: -1rem;
+  }
+  form .order-cont .btns .delivery-btn div {
+    padding-left: 2rem;
+  }
+  form .delivery-cont {
+    width: 50%;
+  }
+  form .delivery-cont .inputs .delivery-total-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #EFF2F7;
+    padding-top: 2rem;
+  }
+  form .delivery-cont .inputs .delivery-total-cont h4 {
+    font-size: 2.8rem;
+  }
+  form .delivery-cont .inputs .delivery-total-cont .delivery-total {
+    font-size: 3rem;
+  }
+  form .delivery-cont .inputs button {
+    width: 240px;
+    height: 54px;
+    border-radius: 4px;
+    font-size: 2.4rem;
+    margin-top: 3rem;
+  }
+  form .delivery-cont .inputs button svg {
+    width: 35px;
+    height: 35px;
+    margin-left: 2rem;
+  }
+  form .delivery-cont .inputs button span {
+    padding-left: 2.4rem;
+    font-weight: 600;
+  }
+  form .payment-cont .payment-methods .payment-method-cont {
+    margin: 0px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+  }
+  form .payment-cont .total-cont {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form .payment-cont .total-cont h4 {
+    font-size: 3rem;
+  }
+  form .payment-cont .total-cont .total {
+    font-size: 3rem;
+  }
+  form .payment-cont button {
+    width: 260px;
+    height: 60px;
+    border-radius: 4px;
+    font-size: 2.5rem;
+    margin-top: 5rem;
+  }
+  form .payment-cont button svg {
+    margin-left: 2rem;
+    width: 42px;
+    height: 42px;
+  }
+  form .payment-cont button div {
+    margin-left: 1.2rem;
+  }
+}
+
+/* --- 1230 --- */
+@media (min-width: 1230px) {
+  form {
+    padding-top: 5rem;
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 37% 63%;
+        grid-template-columns: 37% 63%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". steps";
+    /* --- Steps --- */
+    /* --- Delivery --- */
+    /* --- Payment --- */
+    /* --- Order --- */
+  }
+  form .steps-cont {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: steps;
+    position: relative;
+  }
+  form .steps-cont .steps {
+    width: 45%;
+  }
+  form .steps-cont .steps .step {
+    width: 65px;
+    height: 65px;
+  }
+  form h3 {
+    text-align: left;
+    font-size: 4.5rem;
+  }
+  form .delivery-cont {
+    position: absolute;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 37%;
+    height: 100%;
+    left: 0%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    top: 0%;
+    padding-left: 30px;
+    padding-top: 12rem;
+  }
+  form .delivery-cont .inputs {
+    margin-top: 2.2rem;
+  }
+  form .delivery-cont .inputs .city-cont .city-label input {
+    width: 90%;
+  }
+  form .delivery-cont .inputs .cont {
+    margin-top: 2rem !important;
+  }
+  form .delivery-cont .inputs .cont label div {
+    font-size: 1.7rem;
+  }
+  form .delivery-cont .inputs .cont label input {
+    width: 90%;
+    height: 38px;
+  }
+  form .delivery-cont .inputs button {
+    margin-left: 0px;
+    width: 220px;
+    height: 50px;
+  }
+  form .delivery-cont .inputs button span {
+    font-size: 2.4rem;
+  }
+  form .delivery-cont .inputs .options-cont {
+    margin-top: 2rem !important;
+  }
+  form .delivery-cont .inputs .options-cont label {
+    margin-top: 2rem;
+  }
+  form .delivery-cont .inputs .delivery-total-cont {
+    font-family: "Montserrat";
+  }
+  form .delivery-cont .inputs .delivery-total-cont h4 {
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+  form .payment-cont {
+    position: absolute;
+    width: 37%;
+    height: 100%;
+    left: 0%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    top: 0%;
+    padding-left: 30px;
+    padding-top: 12rem;
+  }
+  form .payment-cont .payment-methods {
+    margin-top: 3rem;
+  }
+  form .payment-cont .payment-methods .payment-method-cont {
+    width: 70%;
+    margin: 0;
+    margin-top: 3rem;
+  }
+  form .payment-cont .total-cont {
+    font-size: 3.2rem;
+    width: 70%;
+    margin: 0;
+    margin-top: 8rem;
+  }
+  form .payment-cont .total-cont .total {
+    font-size: 3rem;
+  }
+  form .payment-cont button {
+    margin-left: 0px;
+    width: 250px;
+  }
+  form .payment-cont button div {
+    padding-left: 2.2rem;
+  }
+  form .order-cont {
+    position: absolute;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 37%;
+    height: 100%;
+    left: 0%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    top: 0%;
+    padding-left: 30px;
+    padding-top: 12rem;
+  }
+  form .order-cont .cart-items .cart-item {
+    width: 100%;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont {
+    width: 80%;
+  }
+  form .order-cont .discount-cont {
+    width: 70%;
+    height: 40px;
+  }
+  form .order-cont .discount-cont button {
+    font-size: 1.7rem;
+  }
+  form .order-cont .total-cont {
+    width: 100%;
+  }
+  form .order-cont .total-cont h4 {
+    font-size: 2.8rem;
+  }
+  form .order-cont .total-cont .total {
+    font-size: 2.8rem;
+  }
+  form .order-cont .btns .delivery-btn {
+    width: 200px;
+    font-size: 2.15rem;
+  }
+  form .order-cont .btns .delivery-btn svg {
+    margin-left: -1rem;
+  }
+  form .order-cont .btns .delivery-btn div {
+    padding-left: 2rem;
+  }
+  .fail-cont .notLogged-info {
+    font-size: 3rem;
+  }
+}
+
+/* --- 1330 --- */
+@media (min-width: 1330px) {
+  form .steps-cont .steps .step {
+    width: 80px;
+    height: 80px;
+    font-size: 4rem;
+  }
+}
+
+/* --- 1450 --- */
+@media (min-width: 1450px) {
+  form {
+    /* --- Delivery --- */
+    /* --- Payment --- */
+  }
+  form .steps-cont .steps {
+    width: 40%;
+  }
+  form .steps-cont .steps .step {
+    width: 80px;
+    height: 80px;
+    font-size: 4rem;
+  }
+  form .steps-cont .steps .step .step-desc {
+    font-size: 2rem;
+  }
+  form h3 {
+    font-size: 5rem;
+  }
+  form .delivery-cont {
+    width: 35%;
+  }
+  form .delivery-cont .inputs {
+    margin-top: 2.2rem;
+  }
+  form .delivery-cont .inputs .city-cont .city-label input {
+    width: 90%;
+    height: 40px;
+  }
+  form .delivery-cont .inputs .cont label div {
+    font-size: 1.7rem;
+  }
+  form .delivery-cont .inputs .cont label input {
+    width: 90%;
+    height: 40px;
+  }
+  form .delivery-cont .inputs button {
+    width: 220px;
+    height: 50px;
+  }
+  form .delivery-cont .inputs button span {
+    font-size: 2.4rem;
+  }
+  form .delivery-cont .inputs .options-cont {
+    margin-top: 2rem !important;
+  }
+  form .delivery-cont .inputs .options-cont label {
+    margin-top: 2rem;
+  }
+  form .delivery-cont .inputs .delivery-total-cont {
+    font-family: "Montserrat";
+  }
+  form .delivery-cont .inputs .delivery-total-cont h4 {
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+  form .delivery-cont .inputs .delivery-total-cont .delivery-total {
+    font-size: 2.8rem;
+  }
+  form .payment-cont .payment-methods .payment-method-cont .payment-icon-cont {
+    width: 65px;
+    height: 65px;
+  }
+  form .payment-cont .payment-methods .payment-method-cont .payment-icon-cont svg {
+    width: 35px;
+    height: 35px;
+  }
+  form .payment-cont button {
+    margin-left: 0px;
+    width: 240px;
+    height: 58px;
+    margin-top: 4rem;
+  }
+  form .payment-cont button svg {
+    margin-left: 2.2rem;
+  }
+  form .payment-cont button div {
+    padding-left: 1.8rem;
+  }
+}
+
+/* --- 1600 --- */
+@media (min-width: 1600px) {
+  header .logo {
+    margin-left: 2rem;
+  }
+  form {
+    /* --- Delivery --- */
+    /* --- Payment --- */
+  }
+  form .steps-cont .steps {
+    width: 40%;
+  }
+  form .steps-cont .steps .step {
+    width: 80px;
+    height: 80px;
+    font-size: 4rem;
+  }
+  form h3 {
+    font-size: 6rem;
+  }
+  form .order-cont {
+    width: 34%;
+  }
+  form .order-cont .discount-cont {
+    height: 42px;
+  }
+  form .order-cont .discount-cont .discount {
+    font-size: 1.7rem;
+  }
+  form .order-cont .btns .delivery-btn {
+    width: 220px;
+    height: 50px;
+    font-size: 2.3rem;
+  }
+  form .order-cont .btns .delivery-btn svg {
+    width: 37px;
+    height: 37px;
+    margin-right: .5rem;
+  }
+  form .order-cont .btns .remove-all {
+    width: 50px;
+    height: 50px;
+  }
+  form .delivery-cont {
+    width: 35%;
+  }
+  form .delivery-cont .inputs .options-cont {
+    margin-top: 2rem !important;
+  }
+  form .delivery-cont .inputs .options-cont label {
+    margin-top: 2.5rem;
+  }
+  form .delivery-cont .inputs .options-cont label p {
+    font-size: 1.8rem;
+  }
+  form .delivery-cont .inputs .delivery-total-cont {
+    font-family: "Montserrat";
+  }
+  form .delivery-cont .inputs .delivery-total-cont h4 {
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+  form .delivery-cont .inputs .delivery-total-cont .delivery-total {
+    font-size: 2.8rem;
+  }
+  form .payment-cont .payment-methods .payment-method-cont {
+    width: 70%;
+    font-size: 3.2rem;
+  }
+  form .payment-cont .total-cont h4 {
+    font-size: 3.4rem;
+  }
+  form .payment-cont .total-cont .total {
+    font-size: 3.2rem;
+  }
+  form .payment-cont button {
+    width: 250px;
+    height: 64px;
+    font-size: 2.5rem;
+  }
+  form .payment-cont button svg {
+    width: 39px;
+    height: 39px;
+    margin-left: 2.2rem;
+  }
+  form .payment-cont button div {
+    padding-left: 1.8rem;
+  }
+}
+
+/* --- 1900 --- */
+@media (min-width: 1900px) {
+  form {
+    /* --- Order --- */
+    /* --- Delivery --- */
+    /* --- Payment --- */
+  }
+  form .steps-cont .steps {
+    width: 42%;
+  }
+  form .steps-cont .steps .step {
+    width: 95px;
+    height: 95px;
+    font-size: 5.2rem;
+  }
+  form h3 {
+    font-size: 6rem;
+  }
+  form .order-cont, form .delivery-cont, form .payment-cont {
+    margin-left: 1rem;
+  }
+  form .order-cont {
+    width: 34%;
+  }
+  form .order-cont .cart-items {
+    margin-top: 5rem;
+  }
+  form .order-cont .cart-items .cart-item {
+    padding: .1rem 0rem;
+    -ms-grid-columns: max-content 2fr .8fr .5fr;
+        grid-template-columns: -webkit-max-content 2fr .8fr .5fr;
+        grid-template-columns: max-content 2fr .8fr .5fr;
+    -ms-grid-rows: 1.4fr 1fr;
+        grid-template-rows: 1.4fr 1fr;
+        grid-template-areas: "img a quantity delete" "img p quantity delete";
+    margin-top: 2rem;
+  }
+  form .order-cont .cart-items .cart-item .item-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 4px;
+  }
+  form .order-cont .cart-items .cart-item a {
+    padding-left: 2rem;
+  }
+  form .order-cont .cart-items .cart-item a {
+    font-size: 2.5rem;
+  }
+  form .order-cont .cart-items .cart-item .price-changes-cont {
+    font-size: 2rem;
+  }
+  form .order-cont .cart-items .cart-item .price-changes-cont .item-price {
+    padding-left: 1rem;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    grid-area: quantity;
+    color: #EFF2F7;
+    padding: .2rem 1rem;
+    margin-left: .9rem;
+    border-radius: 8px;
+    font-size: 3rem;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont .plus, form .order-cont .cart-items .cart-item .quantity-cont .minus {
+    width: 50px;
+    height: 40px;
+  }
+  form .order-cont .cart-items .cart-item .quantity-cont .quant-select {
+    padding: .5rem 0rem;
+    border-radius: 0px 0px 15px 15px;
+  }
+  form .order-cont .cart-items .cart-item .delete-item svg {
+    width: 30px;
+    height: 30px;
+  }
+  form .order-cont h5 {
+    font-size: 2.4rem;
+  }
+  form .order-cont .discount-cont {
+    height: 45px;
+  }
+  form .order-cont .btns .delivery-btn {
+    width: 220px;
+    height: 50px;
+    font-size: 2.3rem;
+  }
+  form .order-cont .btns .delivery-btn svg {
+    width: 37px;
+    height: 37px;
+    margin-right: .5rem;
+  }
+  form .order-cont .btns .remove-all {
+    width: 50px;
+    height: 50px;
+  }
+  form .order-cont .btns .remove-all svg {
+    width: 30px;
+    height: 30px;
+  }
+  form .delivery-cont {
+    width: 30%;
+  }
+  form .delivery-cont .inputs .cont label div {
+    font-size: 1.9rem;
+  }
+  form .delivery-cont .inputs .options-cont {
+    margin-top: 3rem !important;
+  }
+  form .delivery-cont .inputs .options-cont label {
+    margin-top: 2.8rem;
+  }
+  form .delivery-cont .inputs .options-cont label .delivery-method {
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0px 0px 0px 5px #14171B, 0px 0px 0px 7px #30343a;
+            box-shadow: 0px 0px 0px 5px #14171B, 0px 0px 0px 7px #30343a;
+  }
+  form .delivery-cont .inputs .options-cont label p {
+    font-size: 2.1rem;
+    padding-left: 1.9rem;
+  }
+  form .delivery-cont .inputs .delivery-total-cont h4 {
+    font-size: 3.7em;
+  }
+  form .delivery-cont .inputs .delivery-total-cont .delivery-total {
+    font-size: 3.4rem;
+  }
+  form .delivery-cont .inputs button {
+    width: 250px;
+    height: 55px;
+  }
+  form .delivery-cont .inputs button svg {
+    width: 38px;
+    height: 38px;
+  }
+  form .delivery-cont .inputs button span {
+    margin-left: .3rem;
+    font-size: 2.7rem;
+  }
+  form .payment-cont button {
+    width: 250px;
+    height: 56px;
+    font-size: 2.7rem;
+  }
+  form .payment-cont button svg {
+    width: 42px;
+    height: 42px;
+  }
+}
+/*# sourceMappingURL=media.css.map */
