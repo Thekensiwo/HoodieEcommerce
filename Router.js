@@ -407,12 +407,9 @@ router.get('/logout', (req, res) => {
     }
 })
 
-User.find({}).then(res => console.log(res))
-
 router.post('/login', async (req, res) => {
 
     const data = req.body;
-    console.log("data", data)
     const exists = await User.find({ email: data.email })
 
     if (exists.length > 0) {
