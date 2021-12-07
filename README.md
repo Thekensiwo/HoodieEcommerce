@@ -17,5 +17,5 @@ Na zahostowanej stronie dodawane produkty mogą się samoistnie usunąć po pewn
 # Do dokończenia #
 * itemowy slider
 * Walidacja formularzy
-* Dodac opcje w admin dashboard
+* Dodac wszystkie funkcjonalności w admin dashboard
 * Dodac ilosc produktow na magazynie i funkcjonalnośći z tym związane
