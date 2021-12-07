@@ -12,7 +12,7 @@ login: TestUser123 hasło: 123
 login: admin321 hasło: 321
 
 
-Na zahostowanej stronie dodawane produkty mogą się samoistnie usunąć po pewnym czasie przez heroku, które w darmowej wersji kasuje pliki po pewnym czasie.
+Na zahostowanej stronie dodawane produkty mogą się samoistnie usunąć po pewnym czasie przez heroku, które w darmowej wersji kasuje pliki po niedługim czasie.
 
 # Do dokończenia #
 * itemowy slider
