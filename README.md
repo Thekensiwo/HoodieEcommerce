@@ -19,3 +19,4 @@ Na zahostowanej stronie dodawane produkty mogą się samoistnie usunąć po pewn
 * Walidacja formularzy
 * Dodac wszystkie funkcjonalności w admin dashboard
 * Dodac ilosc produktow na magazynie i funkcjonalnośći z tym związane
+* Usuwanie wszystkich itemów z koszyka na raz działa tylko na lokalnym serwerze
